@@ -1,3 +1,5 @@
 Models filter=lfs diff=lfs merge=lfs -text
-Models/basic-model-weights.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
-Models/basic-model-weights.index filter=lfs diff=lfs merge=lfs -text
+Models/ResNet-44-Scratch/basic-model-weights.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+Models/ResNet-44-Scratch/basic-model-weights.index filter=lfs diff=lfs merge=lfs -text
+Data/EffNet-train-precompute/whole_train_data_precomp.npy filter=lfs diff=lfs merge=lfs -text
+
