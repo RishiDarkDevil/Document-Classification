@@ -1,0 +1,2 @@
+model_checkpoint_path: "auto-basic-model-weight"
+all_model_checkpoint_paths: "auto-basic-model-weight"
