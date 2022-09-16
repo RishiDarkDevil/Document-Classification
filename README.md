@@ -18,6 +18,7 @@ Presentation(12)|Questionnaire(13)|Resume(14)|Memo(15)
 ![presentation](Samples/train/presentation.png)|![questionnaire](Samples/train/questionnaire.png)|![resume](Samples/train/resume.png)|![memo](Samples/train/memo.png)
 
 A discussion about the data with few more images from both training and validation set displayed can be seen in the [data overview notebook](Data-Overview.ipynb)
+
 ## Task
 The task is to build a model to classify the images correctly into it's respective category and the performance will be evaluated using the Mean F1-Score. The F1 score, commonly used in information retrieval, measures accuracy using the statistics precision $(\text{p})$ and recall $(\text{r})$.
 
@@ -27,3 +28,14 @@ $$ \text{F1} = 2\frac{\text{p} \cdot \text{r}}{\text{p}+\text{r}}\ \ \mathrm{whe
 
 The F1 metric weights recall and precision equally, and a good retrieval algorithm will maximize both precision and recall simultaneously. Thus, moderately good performance on both will be favored over extremely good performance on one and poor performance on the other.
 
+## Method
+Various visual feature extraction based methods were applied using EfficientNetV2L pretrained model(trained on ImageNet). Two of them are:
+- EfficientNet followed by FFN (EffNet)
+- Partioned Image based EfficientNet followed by FFN (EffNet-4Piece)
+
+The results of clustering of the learnt penultimate layer feature vector for the above two models for the training set is shown below:
+EffNet|EffNet-4Piece
+--|--
+![EffNet](Visualizations/EffNet.png)|![EffNet-4Piece](Visualizations/EffNet-4Piece.png)
+
+Further Work is ongoing to utilize the multi-modal information present in the image and extracting RoIs from the document images.
