@@ -1,27 +1,28 @@
 # Scanned Document Classification
-We take lots of scanned images of documents of various type some taken on handheld devices, some using scanners, etc. So, it becomes increasingly important to organize these scanned documents, which requires reliable and high quality classification of these scanned document images.
-
-Here we deal with this problem and try to classify scanned documents in the following 16 categories:
-labels| 	categories
-------|-------
-0 	|letter
-1 	|form
-2 	|email
-3 	|handwritten
-4 	|advertisement
-5 	|scientific report
-6 	|scientific publication
-7 	|specification
-8 	|file folder
-9 	|news article
-10 	|budget
-11 	|invoice
-12 	|presentation
-13 	|questionnaire
-14 	|resume
-15 	|memo
+We take lots of scanned images of documents of various type some taken on handheld devices, some using scanners, etc. So, it becomes increasingly important to organize these scanned documents, which requires reliable and high quality classification of these scanned document images into several categories like letter, form, etc.
 
 This is a part of [IndoML22(Indian Symposium of Machine Learning-2022)](https://indoml.in/) [Datathon](https://sites.google.com/view/datathonindoml/home) Challenge.
 
 ## Data
-The data is provided in the Datathon which is a subset of [RVL-CDIP dataset](https://adamharley.com/rvl-cdip/). The competition and the data is released in its [Kaggle Competition](https://www.kaggle.com/competitions/datathonindoml-2022).
+The training and validation data is provided in the Datathon which is a subset of 16000 grayscale images from the [RVL-CDIP dataset](https://adamharley.com/rvl-cdip/) with 1000 images belonging to each of the 16 categories in which the images are classified. The competition and the data is released in its [Kaggle Competition](https://www.kaggle.com/competitions/datathonindoml-2022).
+
+Images span across 16 different categories(with their corresponding labels) from the training set as shown below:
+Letter(0)|Form(1)|Email(2)|Handwritten(3)
+--|--|--|--
+![letter](Samples/train/letter.png)|![form](Samples/train/form.png)|![email](Samples/train/email.png)|![handwritten](Samples/train/handwritten.png)
+Advertisement(4)|Scientific Report(5)|Scientific Publication(6)|Specification(7)
+![advertisement](Samples/train/advertisement.png)|![report](Samples/train/report.png)|![publication](Samples/train/publication.png)|![specification](Samples/train/specification.png)
+File Folder(8)|News Article(9)|Budget(10)|Invoice(11)
+![filefolder](Samples/train/filefolder.png)|![newsarticle](Samples/train/newsarticle.png)|![budget](Samples/train/budget.png)|![invoice](Samples/train/invoice.png)
+Presentation(12)|Questionnaire(13)|Resume(14)|Memo(15)
+![presentation](Samples/train/presentation.png)|![questionnaire](Samples/train/questionnaire.png)|![resume](Samples/train/resume.png)|![memo](Samples/train/memo.png)
+
+## Task
+The task is to build a model to classify the images correctly into it's respective category and the performance will be evaluated using the Mean F1-Score. The F1 score, commonly used in information retrieval, measures accuracy using the statistics precision $(\text{p})$ and recall $(\text{r})$.
+
+Precision is the ratio of true positives $(\text{tp})$ to all predicted positives $(\text{tp} + \text{fp})$. Recall is the ratio of true positives $(\text{tp})$ to all actual positives $(\text{tp} + \text{fn})$. The F1 score is given by:
+
+$$ \text{F1} = 2\frac{\text{p} \cdot \text{r}}{\text{p}+\text{r}}\ \ \mathrm{where}\ \ \text{p} = \frac{\text{tp}}{\text{tp}+\text{fp}},\ \ \text{r} = \frac{\text{tp}}{\text{tp}+\text{fn}} $$
+
+The F1 metric weights recall and precision equally, and a good retrieval algorithm will maximize both precision and recall simultaneously. Thus, moderately good performance on both will be favored over extremely good performance on one and poor performance on the other.
+
