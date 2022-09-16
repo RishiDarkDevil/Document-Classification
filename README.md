@@ -17,6 +17,7 @@ File Folder(8)|News Article(9)|Budget(10)|Invoice(11)
 Presentation(12)|Questionnaire(13)|Resume(14)|Memo(15)
 ![presentation](Samples/train/presentation.png)|![questionnaire](Samples/train/questionnaire.png)|![resume](Samples/train/resume.png)|![memo](Samples/train/memo.png)
 
+A discussion about the data with few more images from both training and validation set displayed can be seen in the [data overview notebook](Data-Overview.ipynb)
 ## Task
 The task is to build a model to classify the images correctly into it's respective category and the performance will be evaluated using the Mean F1-Score. The F1 score, commonly used in information retrieval, measures accuracy using the statistics precision $(\text{p})$ and recall $(\text{r})$.
 
