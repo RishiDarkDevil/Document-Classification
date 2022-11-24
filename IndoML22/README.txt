@@ -21,9 +21,7 @@ SETUP:
 - Install necessary packages with the following commands:
 
 	- `pip install jupyter numpy pandas matplotlib scikit-learn opencv-python torch torchvision`
-	
 	- `pip install detectron2 @ git+https://github.com/facebookresearch/detectron2.git@4aca4bdaa9ad48b8e91d7520e0d0815bb8ca0fb1`
-	
 	- `pip install "layoutparser[ocr]"`
 	- `conda install conda install -c apple tensorflow-deps`
 	- `pip install tensorflow-macos`
