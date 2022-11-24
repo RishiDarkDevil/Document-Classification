@@ -50,4 +50,8 @@ IncResNet-RoI-ViT (Mean-F1: 0.755)|ResVGGInc-PCA-4Piece (Mean-F1: 0.785)
 --|--
 ![IncResNet-RoI-ViT](Visualizations/IncResNet-kPiece-ViT.png)|![ResVGGInc-PCA-4Piece](Visualizations/ResVGGInc-PCA-4Piece.png)
 
-Further Work is ongoing to utilize the multi-modal information present in the document images.
+## Usage
+
+- Refer to the `IndoML22` folder it contains `README.txt` file which contains all the information about how to train the ViT model using `train.ipynb` and inferencing trained model using `test.ipynb`. 
+- Colab Notebooks: [train notebook](https://colab.research.google.com/drive/1NcL5gk40tlCUqLowMPm2h9SYcXMmZPx2?usp=sharing) and [test.ipynb](https://drive.google.com/file/d/1idxw4kMOELhIM5BzHnOxWSAdqgijtVwJ/view?usp=sharing). Going through `README.txt` as mentioned above will help better understand the directory structure.
+- Link to the [Pretrained Model]() to be updated.
